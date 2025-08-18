@@ -36,33 +36,10 @@ jobs:
       - name: MonoTV.py Çalıştır
         run: python MonoTV.py
         
-      
+      - name: trgoal.py Çalıştır
+        run: python trgoal.py
 
-      - name: Alive 1
-        run: curl https://kerimmkirac-dproxy.hf.space
-
-      - name: Alive 2
-        run: curl https://kerimmkirac-daddylive.hf.space
-
-      - name: Alive 3
-        run: curl https://kerimmkirac-daddyliveevents.hf.space
-
-      - name: Alive 4
-        run: curl https://kerimmkirac-vavoo.hf.space/
-
-      
-
-      - name: daddylive.m3u dosyasını oluştur
-        run: |
-         curl -s "https://raw.githubusercontent.com/ActionHelper/stforum/main/stdaddy.m3u" | \
-          sed 's|https://sinelive-sineproxy.hf.space/proxy/|https://kerimmkirac-daddylive.hf.space/proxy/|g' \
-          > daddylive.m3u
-
-      - name: daddyliveevents.m3u dosyasını oluştur
-        run: |
-         curl -s "https://raw.githubusercontent.com/ActionHelper/stforum/main/stevents.m3u" | \
-         sed 's|https://sinelive-sineproxy.hf.space/proxy/|https://kerimmkirac-daddyliveevents.hf.space/proxy/|g' \
-         > daddyliveevents.m3u
+ 
 
 
 
@@ -83,5 +60,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "🔄 Tüm listeler güncellendi (TRGoals, MonoTV & CanliTV)" -m "📺 Domain kontrolü ve M3U güncellemeleri tamamlandı" -m "🕒 Otomatik işlem - $GITHUB_SHA"
+          git commit -m "🔄 Tüm listeler güncellendi (mokito, MonoTV & CanliTV)" -m "📺 Domain kontrolü ve M3U güncellemeleri tamamlandı" -m "🕒 Otomatik işlem - $GITHUB_SHA"
           git push
